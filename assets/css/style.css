@@ -1,0 +1,49 @@
+:root {
+    --text2-color: #000000;
+    --text-color: #FAFAFA;
+    --primary-color: #FFFFFF;
+    --secondary-color: #F5F5F5;
+}
+
+/* header style */
+header,header select {
+    background-color: var(--text2-color) !important;
+}
+
+header nav a {
+    color: var(--text2-color) !important;
+}
+
+header form input {
+    background-color: var(--secondary-color) !important;
+}
+
+header .top-banner {
+    color: var(--text-color) !important;
+}
+
+/* footer style */
+footer,footer input,footer button{
+    background-color: var(--text2-color) !important;
+}
+
+footer .copyright{
+    color: var(--primary-color);
+}
+
+/* billing details */
+#billing-details input {
+    background-color: var(--secondary-color) !important;
+    color: var(--text2-color) !important;
+}
+
+ .form-check-input[type="checkbox"]:checked {
+    background-color: #dc3545; /* Bootstrap Danger */
+    border-color: #dc3545;
+}
+
+.form-check-input[type="radio"]:checked {
+    background-color: #000000; /* Black fill */
+    border-color: #000000;
+}
+

@@ -1,0 +1,85 @@
+<div class="container pt-5 pb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+        </ol>
+    </nav>
+
+    <div class="table-responsive mb-4">
+        <table class="table align-middle table-borderless">
+            <thead>
+                <tr class="mb-3">
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="mb-3">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="/assets/images/wishlist-card3.png" alt="LCD Monitor" class="img-fluid me-3"
+                                style="width: 72px; height: 44px;">
+                            <span>LCD Monitor</span>
+                        </div>
+                    </td>
+                    <td>$650</td>
+                    <td>
+                        <input type="number" class="form-control w-25" value="1" min="1" max="10">
+                    </td>
+                    <td>$650</td>
+                </tr>
+                <tr class="mb-3">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="/assets/images/wishlist-card4.png" alt="HI Gamepad" class="img-fluid me-3"
+                                style="width: 72px; height: 44px;">
+                            <span>HI Gamepad</span>
+                        </div>
+                    </td>
+                    <td>$550</td>
+                    <td>
+                        <input type="number" class="form-control w-25" value="2" min="1" max="10">
+                    </td>
+                    <td>$1100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card p-3">
+                <h6 class="mb-3">Apply Coupon</h6>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Coupon Code">
+                    <button class="btn btn-danger">Apply Coupon</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-2">
+                <div class="card-body pb-lg-5">
+                    <h6 class="card-title pb-2 pt-2">Cart Total</h6>
+                    <p class="d-flex justify-content-between border-bottom">
+                        <span>Subtotal:</span>
+                        <span>$1750</span>
+                    </p>
+                    <p class="d-flex justify-content-between border-bottom pb-2">
+                        <span>Shipping:</span>
+                        <span>Free</span>
+                    </p>
+                    <p class="d-flex justify-content-between fw-bold pb-2">
+                        <span>Total:</span>
+                        <span>$1750</span>
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-danger w-100">Proceed to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

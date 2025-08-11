@@ -1,0 +1,129 @@
+<div class="container pt-5 pb-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" class="nav-link">Account</a></li>
+            <li class="breadcrumb-item"><a href="#" class="nav-link">MyAccount</a></li>
+            <li class="breadcrumb-item"><a href="#" class="nav-link">Product</a></li>
+            <li class="breadcrumb-item"><a href="#" class="nav-link">ViewCart</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CheckOut</li>
+        </ol>
+    </nav>
+
+    <div class="row pt-5 align-items-start justify-content-between">
+        <!-- Billing Details Section -->
+        <div class="col-md-5">
+            <h4 class="pb-3">Billing Details</h4>
+            <form>
+                <div id="billing-details">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="companyName" class="form-label">Company Name</label>
+                        <input type="text" id="companyName" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="streetAddress" class="form-label">Street Address</label>
+                        <input type="text" id="streetAddress" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apartment" class="form-label">Apartment, floor, etc. (optional)</label>
+                        <input type="text" id="apartment" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="city" class="form-label">Town/City</label>
+                        <input type="text" id="city" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="text" id="phoneNumber" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailAddress" class="form-label">Email Address</label>
+                        <input type="email" id="emailAddress" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" id="saveInfo" class="form-check-input">
+                    <label for="saveInfo" class="form-check-label">Save this information for faster check-out next
+                        time</label>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="col-md-5 ms-auto">
+            <!-- Items & totals -->
+            <div class="pt-4 pb-2">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="/assets/images/card-3.png" alt="" width="36" height="36">
+                        <span class="text-secondary-emphasis">LCD Monitor</span>
+                    </div>
+                    <span class="fw-medium">$650</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="/assets/images/card-7.png" alt="" width="36" height="36">
+                        <span class="text-secondary-emphasis">H1 Gamepad</span>
+                    </div>
+                    <span class="fw-medium">$1100</span>
+                </div>
+
+                <hr class="my-3">
+
+                <div class="d-flex justify-content-between mb-2 small">
+                    <span class="text-secondary">Subtotal:</span>
+                    <span class="text-dark">$1750</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2 small">
+                    <span class="text-secondary">Shipping:</span>
+                    <span class="text-success">Free</span>
+                </div>
+
+                <hr class="my-3">
+
+                <div class="d-flex justify-content-between mb-1">
+                    <span class="fw-semibold">Total:</span>
+                    <span class="fw-semibold">$1750</span>
+                </div>
+            </div>
+
+            <!-- Payment methods -->
+            <div class="p-3 mb-3 rounded-3 border" id="payment-method">
+                <h6 class="mb-3 fw-semibold">Payment Method</h6>
+
+                <div class="form-check mb-3">
+                    <input type="radio" id="bankPayment" name="paymentMethod" class="form-check-input" value="bank">
+                    <label for="bankPayment" class="form-check-label">Bank</label>
+                    <div class="mt-2">
+                        <!-- Logo strip exactly like screenshot -->
+                        <img src="/assets/images/bank.png" alt="Visa, MasterCard, bKash, Nagad, Rocket"
+                            style="height:24px">
+                    </div>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" id="cashOnDelivery" name="paymentMethod" class="form-check-input" value="cod"
+                        checked>
+                    <label for="cashOnDelivery" class="form-check-label">Cash on delivery</label>
+                </div>
+            </div>
+
+            <!-- Coupon -->
+            <div class="row g-2 mb-3">
+                <div class="col-7">
+                    <input type="text" class="form-control" placeholder="Coupon Code">
+                </div>
+                <div class="col-5">
+                    <button class="btn btn-danger w-100">Apply Coupon</button>
+                </div>
+            </div>
+
+            <!-- Place Order -->
+            <button class="btn btn-danger w-50 py-2">Place Order</button>
+        </div>
+    </div>
+</div>

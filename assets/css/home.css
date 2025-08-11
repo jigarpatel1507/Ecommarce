@@ -1,0 +1,30 @@
+/* Image container ---same style for wishlist page */
+.image-box {
+  height: 200px;
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+}
+
+/* Button area (starts hidden below the image) */
+.add-to-cart-hover-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+/* Show button on hover (expand height) */
+.product-card:hover .add-to-cart-hover-wrapper {
+  height: 48px; 
+}
+
+
