@@ -1,325 +1,505 @@
-<div class="container pt-5 pb-5">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="d-flex d-inline-block justify-content-between pb-3">
-        <h5 class="fw-bold mb-2">wishlist(4)</h5>
-        <button class="btn btn-danger">Move All To Bag</button>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="row g-4">
-        <!-- Product 1 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-0  position-relative h-100 product-card">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/home.js"></script>
+    <title>eCommarce</title>
+</head>
 
-                <!-- Like & Eye Icons -->
-                <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                    <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-trash"></i></button>
+<body>
+
+    <header id="header">
+        <div class="">
+            <!-- Top Banner -->
+            <div class="top-banner text-white p-2 small d-flex justify-content-between align-items-center">
+                <!-- Left spacer for balance -->
+                <div></div>
+
+                <!-- Center content -->
+                <div class="text-center flex-grow-1">
+                    Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+                    <a href="#" class="fw-bold text-white">ShopNow</a>
                 </div>
 
-                <!-- Image Box -->
-                <div class="image-box">
-                    <img src="/assets/images/wishlist-card1.png" alt="Product" class="product-img">
+                <!-- Right content -->
+                <div>
+                    <select class="text-white border-0">
+                        <option>English</option>
+                        <option>Hindi</option>
+                    </select>
                 </div>
+            </div>
+            <!-- Navbar -->
+            <div class="d-block justify-content-center justify-content-between">
+                <nav class="navbar navbar-expand-sm  bg-white shadow-sm">
+                    <div class="container">
+                        <!-- Brand -->
+                        <a class="navbar-brand fw-bold" href="#">Exclusive</a>
 
-                <!-- Add to Cart Button (initially hidden) -->
-                <div class="add-to-cart-hover-wrapper w-100">
-                    <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                        Add To Cart
-                    </button>
-                </div>
+                        <!-- Nav links + search -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <!-- Nav Links -->
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sign Up</a>
+                                </li>
+                            </ul>
 
-                <!-- Product Info -->
-                <div class="card-body text-start">
-                    <h6 class="card-title mb-1">Breed Dry Dog Food</h6>
-                    <p class="text-danger fw-bold mb-1">$100</p>
-                    <div class="text-warning small mb-0">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <span class="text-muted ms-1">(95)</span>
+                            <!-- Search -->
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="What are you looking for?"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-
+                </nav>
             </div>
         </div>
+    </header>
+    <main>
+        <div class="container pt-5 pb-5">
 
-        <!-- Product 2 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-0  position-relative h-100 product-card">
-
-                <!-- Like & Eye Icons -->
-                <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                    <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-trash"></i></button>
-                </div>
-
-                <!-- Image Box -->
-                <div class="image-box">
-                    <img src="/assets/images/wishlist-card2.png" alt="Product" class="product-img">
-                </div>
-
-                <!-- Add to Cart Button (initially hidden) -->
-                <div class="add-to-cart-hover-wrapper w-100">
-                    <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                        Add To Cart
-                    </button>
-                </div>
-
-                <!-- Product Info -->
-                <div class="card-body text-start">
-                    <h6 class="card-title mb-1">CANON EOS DSLR Camera</h6>
-                    <p class="text-danger fw-bold mb-1">$360</p>
-                    <div class="text-warning small mb-0">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <span class="text-muted ms-1">(95)</span>
-                    </div>
-                </div>
-
+            <div class="d-flex d-inline-block justify-content-between pb-3">
+                <h5 class="fw-bold mb-2">wishlist(4)</h5>
+                <button class="btn btn-danger">Move All To Bag</button>
             </div>
-        </div>
 
-        <!-- Product 3 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-0  position-relative h-100 product-card">
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0  position-relative h-100 product-card">
 
-                <!-- Like & Eye Icons -->
-                <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                    <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-trash"></i></button>
-                </div>
+                        <!-- Like & Eye Icons -->
+                        <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                            <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                    class="bi bi-trash"></i></button>
+                        </div>
 
-                <!-- Image Box -->
-                <div class="image-box">
-                    <img src="/assets/images/card-7.png" alt="Product" class="product-img">
-                </div>
+                        <!-- Image Box -->
+                        <div class="image-box">
+                            <img src="/assets/images/wishlist-card1.png" alt="Product" class="product-img">
+                        </div>
 
-                <!-- Add to Cart Button (initially hidden) -->
-                <div class="add-to-cart-hover-wrapper w-100">
-                    <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                        Add To Cart
-                    </button>
-                </div>
+                        <!-- Add to Cart Button (initially hidden) -->
+                        <div class="add-to-cart-hover-wrapper w-100">
+                            <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                Add To Cart
+                            </button>
+                        </div>
 
-                <!-- Product Info -->
-                <div class="card-body text-start">
-                    <h6 class="card-title mb-1">ASUS FHD Gaming Laptop</h6>
-                    <p class="text-danger fw-bold mb-1">$260</p>
-                    <div class="text-warning small mb-0">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <span class="text-muted ms-1">(95)</span>
+                        <!-- Product Info -->
+                        <div class="card-body text-start">
+                            <h6 class="card-title mb-1">Breed Dry Dog Food</h6>
+                            <p class="text-danger fw-bold mb-1">$100</p>
+                            <div class="text-warning small mb-0">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <span class="text-muted ms-1">(95)</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Product 2 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0  position-relative h-100 product-card">
+
+                        <!-- Like & Eye Icons -->
+                        <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                            <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                    class="bi bi-trash"></i></button>
+                        </div>
+
+                        <!-- Image Box -->
+                        <div class="image-box">
+                            <img src="/assets/images/wishlist-card2.png" alt="Product" class="product-img">
+                        </div>
+
+                        <!-- Add to Cart Button (initially hidden) -->
+                        <div class="add-to-cart-hover-wrapper w-100">
+                            <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                Add To Cart
+                            </button>
+                        </div>
+
+                        <!-- Product Info -->
+                        <div class="card-body text-start">
+                            <h6 class="card-title mb-1">CANON EOS DSLR Camera</h6>
+                            <p class="text-danger fw-bold mb-1">$360</p>
+                            <div class="text-warning small mb-0">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <span class="text-muted ms-1">(95)</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0  position-relative h-100 product-card">
+
+                        <!-- Like & Eye Icons -->
+                        <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                            <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                    class="bi bi-trash"></i></button>
+                        </div>
+
+                        <!-- Image Box -->
+                        <div class="image-box">
+                            <img src="/assets/images/card-7.png" alt="Product" class="product-img">
+                        </div>
+
+                        <!-- Add to Cart Button (initially hidden) -->
+                        <div class="add-to-cart-hover-wrapper w-100">
+                            <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                Add To Cart
+                            </button>
+                        </div>
+
+                        <!-- Product Info -->
+                        <div class="card-body text-start">
+                            <h6 class="card-title mb-1">ASUS FHD Gaming Laptop</h6>
+                            <p class="text-danger fw-bold mb-1">$260</p>
+                            <div class="text-warning small mb-0">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <span class="text-muted ms-1">(95)</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card border-0  position-relative h-100 product-card">
+
+                        <!-- Like & Eye Icons -->
+                        <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                            <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                    class="bi bi-trash"></i></button>
+                        </div>
+
+                        <!-- Image Box -->
+                        <div class="image-box">
+                            <img src="/assets/images/card-8.png" alt="Product" class="product-img">
+                        </div>
+
+                        <!-- Add to Cart Button (initially hidden) -->
+                        <div class="add-to-cart-hover-wrapper w-100">
+                            <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                Add To Cart
+                            </button>
+                        </div>
+
+                        <!-- Product Info -->
+                        <div class="card-body text-start">
+                            <h6 class="card-title mb-1">ASUS FHD Gaming Laptop</h6>
+                            <p class="text-danger fw-bold mb-1">$260</p>
+                            <div class="text-warning small mb-0">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <span class="text-muted ms-1">(95)</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Product 4 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card border-0  position-relative h-100 product-card">
 
-                <!-- Like & Eye Icons -->
-                <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                    <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-trash"></i></button>
+            <div>
+                <div class="d-flex d-inline-block justify-content-between">
+                    <h5 class="fw-bold mb-2">Just For You</h5>
+                    <button class="btn btn-danger">See All</button>
                 </div>
+                <div class="row g-4 pt-3">
 
-                <!-- Image Box -->
-                <div class="image-box">
-                    <img src="/assets/images/card-8.png" alt="Product" class="product-img">
-                </div>
+                    <!-- Product 5 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border-0 position-relative h-100 product-card">
 
-                <!-- Add to Cart Button (initially hidden) -->
-                <div class="add-to-cart-hover-wrapper w-100">
-                    <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                        Add To Cart
-                    </button>
-                </div>
+                            <!-- Like & Eye Icons -->
+                            <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                                <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
 
-                <!-- Product Info -->
-                <div class="card-body text-start">
-                    <h6 class="card-title mb-1">ASUS FHD Gaming Laptop</h6>
-                    <p class="text-danger fw-bold mb-1">$260</p>
-                    <div class="text-warning small mb-0">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star"></i>
-                        <span class="text-muted ms-1">(95)</span>
+                            <!-- Image Box -->
+                            <div class="image-box">
+                                <img src="/assets/images/card-3.png" alt="Product" class="product-img">
+                            </div>
+
+                            <!-- Add to Cart Button (initially hidden) -->
+                            <div class="add-to-cart-hover-wrapper w-100">
+                                <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                    Add To Cart
+                                </button>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1">Kids Electric Car</h6>
+                                <p class="text-danger fw-bold mb-1">$1000</p>
+                                <div class="text-warning small mb-0">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">(95)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border-0 position-relative h-100 product-card">
+
+                            <!-- Like & Eye Icons -->
+                            <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                                <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+
+                            <!-- Image Box -->
+                            <div class="image-box">
+                                <img src="/assets/images/wishlist-card3.png" alt="Product" class="product-img">
+                            </div>
+
+                            <!-- Add to Cart Button (initially hidden) -->
+                            <div class="add-to-cart-hover-wrapper w-100">
+                                <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                    Add To Cart
+                                </button>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1">Jr. Zoom Soccer Cleats</h6>
+                                <p class="text-danger fw-bold mb-1">$850</p>
+                                <div class="text-warning small mb-0">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">(95)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border-0 position-relative h-100 product-card">
+
+                            <!-- Like & Eye Icons -->
+                            <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                                <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+
+                            <!-- Image Box -->
+                            <div class="image-box">
+                                <img src="/assets/images/wishlist-card4.png" alt="Product" class="product-img">
+                            </div>
+
+                            <!-- Add to Cart Button (initially hidden) -->
+                            <div class="add-to-cart-hover-wrapper w-100">
+                                <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                    Add To Cart
+                                </button>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1">GP11 Shooter USB Gamepad</h6>
+                                <p class="text-danger fw-bold mb-1">$1120</p>
+                                <div class="text-warning small mb-0">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">(95)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card border-0 position-relative h-100 product-card">
+
+                            <!-- Like & Eye Icons -->
+                            <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
+                                <button class="btn btn-light btn-sm rounded-circle icon-btn"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+
+                            <!-- Image Box -->
+                            <div class="image-box">
+                                <img src="/assets/images/wishlist-card5.png" alt="Product" class="product-img">
+                            </div>
+
+                            <!-- Add to Cart Button (initially hidden) -->
+                            <div class="add-to-cart-hover-wrapper w-100">
+                                <button class="btn btn-dark text-white add-to-cart-hover w-100">
+                                    Add To Cart
+                                </button>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1">Quilted Satin Jacket</h6>
+                                <p class="text-danger fw-bold mb-1">$300</p>
+                                <div class="text-warning small mb-0">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">(95)</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-
             </div>
+
+
         </div>
-    </div>
+    </main>
 
+    <footer>
+        <!-- Footer -->
+        <div class="text-white pt-5 pb-2">
+            <div class="container">
+                <div class="row">
 
-    <div>
-        <div class="d-flex d-inline-block justify-content-between">
-             <h5 class="fw-bold mb-2">Just For You</h5>
-             <button class="btn btn-danger">See All</button>
-        </div>
-        <div class="row g-4 pt-3">
-           
-            <!-- Product 5 -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card border-0 position-relative h-100 product-card">
-
-                    <!-- Like & Eye Icons -->
-                    <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                        <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-eye"></i></button>
+                    <!-- Exclusive -->
+                    <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 fw-bold">Exclusive</h6>
+                        <p>Subscribe</p>
+                        <p>Get 10% off your first order</p>
+                        <form class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Enter your email">
+                            <button class="btn btn-outline-light" type="submit">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
                     </div>
 
-                    <!-- Image Box -->
-                    <div class="image-box">
-                        <img src="/assets/images/card-3.png" alt="Product" class="product-img">
+                    <!-- Support -->
+                    <div class="col-12 col-md-6 col-lg-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 fw-bold">Support</h6>
+                        <p>111 Bijoy sarani, Dhaka,<br>DH 1515, Bangladesh.</p>
+                        <p>exclusive@gmail.com</p>
+                        <p>+88015-88888-9999</p>
                     </div>
 
-                    <!-- Add to Cart Button (initially hidden) -->
-                    <div class="add-to-cart-hover-wrapper w-100">
-                        <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                            Add To Cart
-                        </button>
+                    <!-- Account -->
+                    <div class="col-12 col-md-6 col-lg-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 fw-bold">Account</h6>
+                        <p><a href="#" class="text-white text-decoration-none">My Account</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Login / Register</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Cart</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Wishlist</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Shop</a></p>
                     </div>
 
-                    <!-- Product Info -->
-                    <div class="card-body text-start">
-                        <h6 class="card-title mb-1">Kids Electric Car</h6>
-                        <p class="text-danger fw-bold mb-1">$1000</p>
-                        <div class="text-warning small mb-0">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <span class="text-muted ms-1">(95)</span>
+                    <!-- Quick Link -->
+                    <div class="col-12 col-md-6 col-lg-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 fw-bold">Quick Link</h6>
+                        <p><a href="#" class="text-white text-decoration-none">Privacy Policy</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Terms Of Use</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">FAQ</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Contact</a></p>
+                    </div>
+
+                    <!-- Download App & Social Media -->
+                    <div class="col-12 col-md-6 col-lg-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 fw-bold" style="font-family: 'Poppins', sans-serif;">Download App
+                        </h6>
+                        <p style="font-family: 'Poppins', sans-serif;">Save $3 with App New User Only</p>
+
+                        <div class="d-flex align-items-center">
+                            <!-- QR Code -->
+                            <div class="me-3">
+                                <img src="/assets/images/qr-code.png" alt="QR Code" class="img-fluid"
+                                    style="max-width: 100px;">
+                            </div>
+                            <!-- App Store Buttons -->
+                            <div class="d-flex flex-column">
+                                <a href="#"><img src="/assets/images/playStore.png" alt="Google Play"
+                                        class="img-fluid mb-2" style="max-width: 130px;"></a>
+                                <a href="#"><img src="/assets/images/app-store.png" alt="App Store" class="img-fluid"
+                                        style="max-width: 130px;"></a>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="mt-3">
+                            <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
 
                 </div>
-            </div>
 
-            <!-- Product 6 -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card border-0 position-relative h-100 product-card">
 
-                    <!-- Like & Eye Icons -->
-                    <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                        <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-eye"></i></button>
+                <!-- Footer Bottom -->
+                <div class="row pt-3 copyright">
+                    <div class="col-12 text-center text-dark">
+                        <p class="mb-0">© Copyright Rimel 2022. All rights reserved</p>
                     </div>
-
-                    <!-- Image Box -->
-                    <div class="image-box">
-                        <img src="/assets/images/wishlist-card3.png" alt="Product" class="product-img">
-                    </div>
-
-                    <!-- Add to Cart Button (initially hidden) -->
-                    <div class="add-to-cart-hover-wrapper w-100">
-                        <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                            Add To Cart
-                        </button>
-                    </div>
-
-                    <!-- Product Info -->
-                    <div class="card-body text-start">
-                        <h6 class="card-title mb-1">Jr. Zoom Soccer Cleats</h6>
-                        <p class="text-danger fw-bold mb-1">$850</p>
-                        <div class="text-warning small mb-0">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <span class="text-muted ms-1">(95)</span>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-            <!-- Product 7 -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card border-0 position-relative h-100 product-card">
-
-                    <!-- Like & Eye Icons -->
-                    <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                        <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-eye"></i></button>
-                    </div>
-
-                    <!-- Image Box -->
-                    <div class="image-box">
-                        <img src="/assets/images/wishlist-card4.png" alt="Product" class="product-img">
-                    </div>
-
-                    <!-- Add to Cart Button (initially hidden) -->
-                    <div class="add-to-cart-hover-wrapper w-100">
-                        <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                            Add To Cart
-                        </button>
-                    </div>
-
-                    <!-- Product Info -->
-                    <div class="card-body text-start">
-                        <h6 class="card-title mb-1">GP11 Shooter USB Gamepad</h6>
-                        <p class="text-danger fw-bold mb-1">$1120</p>
-                        <div class="text-warning small mb-0">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <span class="text-muted ms-1">(95)</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Product 8 -->
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card border-0 position-relative h-100 product-card">
-
-                    <!-- Like & Eye Icons -->
-                    <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                        <button class="btn btn-light btn-sm rounded-circle icon-btn"><i class="bi bi-eye"></i></button>
-                    </div>
-
-                    <!-- Image Box -->
-                    <div class="image-box">
-                        <img src="/assets/images/wishlist-card5.png" alt="Product" class="product-img">
-                    </div>
-
-                    <!-- Add to Cart Button (initially hidden) -->
-                    <div class="add-to-cart-hover-wrapper w-100">
-                        <button class="btn btn-dark text-white add-to-cart-hover w-100">
-                            Add To Cart
-                        </button>
-                    </div>
-
-                    <!-- Product Info -->
-                    <div class="card-body text-start">
-                        <h6 class="card-title mb-1">Quilted Satin Jacket</h6>
-                        <p class="text-danger fw-bold mb-1">$300</p>
-                        <div class="text-warning small mb-0">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star"></i>
-                            <span class="text-muted ms-1">(95)</span>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
-    </div>
-
-
-</div>
+    </footer>

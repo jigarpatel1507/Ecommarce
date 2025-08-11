@@ -6,7 +6,8 @@
 }
 
 /* header style */
-header,header select {
+header,
+header select {
     background-color: var(--text2-color) !important;
 }
 
@@ -23,11 +24,13 @@ header .top-banner {
 }
 
 /* footer style */
-footer,footer input,footer button{
+footer,
+footer input,
+footer button {
     background-color: var(--text2-color) !important;
 }
 
-footer .copyright{
+footer .copyright {
     color: var(--primary-color);
 }
 
@@ -37,13 +40,26 @@ footer .copyright{
     color: var(--text2-color) !important;
 }
 
- .form-check-input[type="checkbox"]:checked {
-    background-color: #dc3545; /* Bootstrap Danger */
+.form-check-input[type="checkbox"]:checked {
+    background-color: #dc3545;
+    /* Bootstrap Danger */
     border-color: #dc3545;
 }
 
 .form-check-input[type="radio"]:checked {
-    background-color: #000000; /* Black fill */
+    background-color: #000000;
+    /* Black fill */
     border-color: #000000;
 }
 
+
+/*breadcrumb styles*/
+.breadcrumb a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: black !important;
+    text-decoration: none;
+}
