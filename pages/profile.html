@@ -88,7 +88,8 @@
             <a href="#" class="list-group-item list-group-item-action">Profile</a>
             <a href="#" class="list-group-item list-group-item-action text-danger">Logout</a>
         </div>
-   '><i class="bi bi-person-circle"></i>
+   '>
+                                    <i class="bi bi-person-circle"></i>
                                 </a>
                             </div>
                         </div>
@@ -97,93 +98,124 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="container pt-5 pb-5">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
-                </ol>
-            </nav>
 
-            <div class="table-responsive mb-4">
-                <table class="table align-middle table-borderless">
-                    <thead>
-                        <tr class="mb-3">
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="mb-3">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="/assets/images/wishlist-card3.png" alt="LCD Monitor"
-                                        class="img-fluid me-3" style="width: 72px; height: 44px;">
-                                    <span>LCD Monitor</span>
-                                </div>
-                            </td>
-                            <td>$650</td>
-                            <td>
-                                <input type="number" class="form-control w-25" value="1" min="1" max="10">
-                            </td>
-                            <td>$650</td>
-                        </tr>
-                        <tr class="mb-3">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="/assets/images/wishlist-card4.png" alt="HI Gamepad" class="img-fluid me-3"
-                                        style="width: 72px; height: 44px;">
-                                    <span>HI Gamepad</span>
-                                </div>
-                            </td>
-                            <td>$550</td>
-                            <td>
-                                <input type="number" class="form-control w-25" value="2" min="1" max="10">
-                            </td>
-                            <td>$1100</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">My Account</li>
+            </ol>
+        </nav>
 
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card p-3">
-                        <h6 class="mb-3">Apply Coupon</h6>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Coupon Code">
-                            <button class="btn btn-danger">Apply Coupon</button>
+        <!-- Profile Edit Card -->
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="fw-bold mb-4 text-danger">Edit Your Profile</h5>
+
+                <form id="profile">
+                    <!-- Basic Info -->
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address">
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-2">
-                        <div class="card-body pb-lg-5">
-                            <h6 class="card-title pb-2 pt-2">Cart Total</h6>
-                            <p class="d-flex justify-content-between border-bottom">
-                                <span>Subtotal:</span>
-                                <span>$1750</span>
-                            </p>
-                            <p class="d-flex justify-content-between border-bottom pb-2">
-                                <span>Shipping:</span>
-                                <span>Free</span>
-                            </p>
-                            <p class="d-flex justify-content-between fw-bold pb-2">
-                                <span>Total:</span>
-                                <span>$1750</span>
-                            </p>
-                            <div class="d-flex justify-content-center">
-                                <button class="btn btn-danger w-100">Proceed to checkout</button>
+
+                    <!-- Gender -->
+                    <div class="profile-check-radio">
+                        <div class="mt-4">
+                            <label class="form-label d-block">Gender</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="Male"
+                                    required>
+                                <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                                <label class="form-check-label" for="female">Female</label>
+                            </div>
+                        </div>
+
+                        <!-- Interests -->
+                        <div class="mt-3">
+                            <label class="form-label d-block">Interests</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="gaming" value="Gaming">
+                                <label class="form-check-label" for="gaming">Gaming</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="mobile" value="Mobile">
+                                <label class="form-check-label" for="mobile">Mobile</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="laptop" value="Laptop">
+                                <label class="form-check-label" for="laptop">Laptop</label>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- Location -->
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-4">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <label for="mobileNumber" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobileNumber" pattern="[0-9]{10}" maxlength="10"
+                                placeholder="Enter 10-digit number" required>
+                        </div>
+                    </div>
+
+                    <!-- Password Changes -->
+                    <h6 class="mt-4 mb-3">Password Changes</h6>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <input type="password" class="form-control" placeholder="Current Password" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control" placeholder="New Password" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control" placeholder="Confirm New Password" required>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="mt-4 d-flex justify-content-end gap-3">
+                        <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-danger">Save Changes</button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>
+
 
     <footer>
         <!-- Footer -->
@@ -274,7 +306,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

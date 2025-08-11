@@ -63,3 +63,10 @@ footer .copyright {
     color: black !important;
     text-decoration: none;
 }
+
+/* profile */
+#profile input {
+    background-color: var(--secondary-color) !important;
+    color: var(--text2-color) !important;
+}
+
