@@ -18,7 +18,7 @@
 
 <body>
 
-   <header id="header" class="sticky-top">
+    <header id="header" class="sticky-top">
         <div class="">
             <!-- Top Banner -->
             <div class="top-banner text-white p-2 small d-flex justify-content-between align-items-center">
@@ -67,7 +67,8 @@
                             <!-- Search + Icons -->
                             <div class="d-flex align-items-center">
                                 <form class="d-flex me-3" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+                                    <input class="form-control me-2" type="search"
+                                        placeholder="What are you looking for?" aria-label="Search">
                                     <button class="btn btn-outline-dark" type="submit">
                                         <i class="bi bi-search"></i>
                                     </button>
@@ -84,7 +85,8 @@
                                 </a>
 
                                 <!-- Profile Icon -->
-                                <a href="#" id="profileIcon" class="text-dark me-3 fs-5" data-bs-toggle="popover" data-bs-html="true" data-bs-content='
+                                <a href="#" id="profileIcon" class="text-dark me-3 fs-5" data-bs-toggle="popover"
+                                    data-bs-html="true" data-bs-content='
                                     <div class="list-group">
                                         <a href="profile.html" class="list-group-item list-group-item-action">Profile</a>
                                         <a href="index.html" class="list-group-item list-group-item-action text-danger">Logout</a>
@@ -101,6 +103,7 @@
     </header>
     <main>
         <div class="container pt-5 pb-5">
+            <!-- Breadcrumb -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Account</a></li>
@@ -112,125 +115,110 @@
             </nav>
 
             <div class="row pt-5 align-items-start justify-content-between">
-                <!-- Billing Details Section -->
+                <!-- Billing Details -->
                 <div class="col-md-5">
                     <h4 class="pb-3">Billing Details</h4>
-                    <form>
+                    <form id="checkoutForm">
                         <div id="billing-details">
                             <div class="mb-3">
-                                <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" id="firstName" class="form-control" required>
+                                <label for="billingFirstName" class="form-label">First Name</label>
+                                <input type="text" id="billingFirstName" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="companyName" class="form-label">Company Name</label>
-                                <input type="text" id="companyName" class="form-control">
+                                <label for="billingCompanyName" class="form-label">Company Name</label>
+                                <input type="text" id="billingCompanyName" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label for="streetAddress" class="form-label">Street Address</label>
-                                <input type="text" id="streetAddress" class="form-control" required>
+                                <label for="billingStreetAddress" class="form-label">Street Address</label>
+                                <input type="text" id="billingStreetAddress" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="apartment" class="form-label">Apartment, floor, etc. (optional)</label>
-                                <input type="text" id="apartment" class="form-control">
+                                <label for="billingApartment" class="form-label">Apartment, floor, etc.
+                                    (optional)</label>
+                                <input type="text" id="billingApartment" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label for="city" class="form-label">Town/City</label>
-                                <input type="text" id="city" class="form-control" required>
+                                <label for="billingCity" class="form-label">Town/City</label>
+                                <input type="text" id="billingCity" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="phoneNumber" class="form-label">Phone Number</label>
-                                <input type="text" id="phoneNumber" class="form-control" required>
+                                <label for="billingPhoneNumber" class="form-label">Phone Number</label>
+                                <input type="text" id="billingPhoneNumber" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="emailAddress" class="form-label">Email Address</label>
-                                <input type="email" id="emailAddress" class="form-control" required>
+                                <label for="billingEmailAddress" class="form-label">Email Address</label>
+                                <input type="email" id="billingEmailAddress" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" id="saveInfo" class="form-check-input">
-                            <label for="saveInfo" class="form-check-label">Save this information for faster check-out
-                                next
-                                time</label>
+                            <input type="checkbox" id="saveBillingInfo" class="form-check-input">
+                            <label for="saveBillingInfo" class="form-check-label">Save this information for faster
+                                check-out next time</label>
                         </div>
                     </form>
                 </div>
 
-                <!-- Order Summary Section -->
+                <!-- Order Summary -->
                 <div class="col-md-5 ms-auto">
-                    <!-- Items & totals -->
-                    <div class="pt-4 pb-2">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <img src="/assets/images/card-3.png" alt="" width="36" height="36">
-                                <span class="text-secondary-emphasis">LCD Monitor</span>
-                            </div>
-                            <span class="fw-medium">$650</span>
-                        </div>
-
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <div class="d-flex align-items-center gap-3">
-                                <img src="/assets/images/card-7.png" alt="" width="36" height="36">
-                                <span class="text-secondary-emphasis">H1 Gamepad</span>
-                            </div>
-                            <span class="fw-medium">$1100</span>
-                        </div>
-
-                        <hr class="my-3">
-
-                        <div class="d-flex justify-content-between mb-2 small">
-                            <span class="text-secondary">Subtotal:</span>
-                            <span class="text-dark">$1750</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2 small">
-                            <span class="text-secondary">Shipping:</span>
-                            <span class="text-success">Free</span>
-                        </div>
-
-                        <hr class="my-3">
-
-                        <div class="d-flex justify-content-between mb-1">
-                            <span class="fw-semibold">Total:</span>
-                            <span class="fw-semibold">$1750</span>
-                        </div>
+                    <div id="orderSummary" class="pt-4 pb-2">
+                        <!-- Items dynamically inserted here -->
                     </div>
 
-                    <!-- Payment methods -->
-                    <div class="p-3 mb-3 rounded-3 border" id="payment-method">
-                        <h6 class="mb-3 fw-semibold">Payment Method</h6>
+                    <hr class="my-3">
 
+                    <!-- Totals -->
+                    <div class="d-flex justify-content-between mb-2 small">
+                        <span class="text-secondary">Subtotal:</span>
+                        <span id="orderSubtotal" class="text-dark">$0</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2 small">
+                        <span class="text-secondary">Shipping:</span>
+                        <span id="orderShipping" class="text-success">Free</span>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="fw-semibold">Total:</span>
+                        <span id="orderTotal" class="fw-semibold">$0</span>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div id="paymentMethods" class="p-3 mb-3 rounded-3 border">
+                        <h6 class="mb-3 fw-semibold">Payment Method</h6>
                         <div class="form-check mb-3 d-flex align-items-center">
-                            <input type="radio" id="bankPayment" name="paymentMethod" class="form-check-input me-2"
+                            <input type="radio" id="paymentBank" name="paymentMethod" class="form-check-input me-2"
                                 value="bank">
-                            <label for="bankPayment" class="form-check-label d-flex align-items">
+                            <label for="paymentBank" class="form-check-label d-flex align-items">
                                 Bank
                                 <img src="/assets/images/bank.png" alt="Visa, MasterCard, bKash, Nagad, Rocket"
                                     class="ms-2" style="height:24px">
                             </label>
                         </div>
-
                         <div class="form-check">
-                            <input type="radio" id="cashOnDelivery" name="paymentMethod" class="form-check-input me-2"
+                            <input type="radio" id="paymentCOD" name="paymentMethod" class="form-check-input me-2"
                                 value="cod" checked>
-                            <label for="cashOnDelivery" class="form-check-label">Cash on delivery</label>
+                            <label for="paymentCOD" class="form-check-label">Cash on delivery</label>
                         </div>
                     </div>
 
                     <!-- Coupon -->
                     <div class="row g-2 mb-3">
                         <div class="col-7">
-                            <input type="text" class="form-control" placeholder="Coupon Code">
+                            <input type="text" id="couponCode" class="form-control" placeholder="Coupon Code">
                         </div>
                         <div class="col-5">
-                            <button class="btn btn-danger w-100">Apply Coupon</button>
+                            <button id="applyCouponBtn" class="btn btn-danger w-100">Apply Coupon</button>
                         </div>
                     </div>
 
                     <!-- Place Order -->
-                    <button class="btn btn-danger w-50 py-2">Place Order</button>
+                    <button id="placeOrderBtn" class="btn btn-danger w-50 py-2">Place Order</button>
                 </div>
             </div>
         </div>
     </main>
+
     <footer>
         <!-- Footer -->
         <div class="text-white pt-5 pb-2">
@@ -320,6 +308,7 @@
             </div>
         </div>
     </footer>
+    <script src="/assets/js/checkout.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
