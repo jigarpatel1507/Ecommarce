@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("cards-container");
+  const container = document.getElementById("cards-container");
 
-    fetch('../data.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(products => {
-            products.forEach(product => {
-                const card = `
+  fetch('../data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(products => {
+      products.forEach(product => {
+        const card = `
                   <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card border-0 position-relative h-100 product-card">
 
@@ -52,34 +52,54 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                   </div>
                 `;
-                container.innerHTML += card;
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching products:", error);
-        });
+        container.innerHTML += card;
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching products:", error);
+    });
 });
 
 //logic for adding items to wishlist
 
 document.addEventListener('click', e => {
-    if (e.target.closest('.wishlist-btn')) {
-        const btn = e.target.closest('.wishlist-btn');
-        const productData = {
-            id: btn.dataset.id,
-            name: btn.dataset.name,
-            price: btn.dataset.price,
-            image: btn.dataset.image,
-            rating: btn.dataset.rating || 0, // default rating if not provided
-            reviews: btn.dataset.reviews || 0 // default reviews if not provided
-        };
-        //set to the localstorage
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        if(!wishlist.some(item => item.id === productData.id)) {
-            wishlist.push(productData);
-        }
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    }
+  // Wishlist button clicked
+  if (e.target.closest('.wishlist-btn')) {
+    const btn = e.target.closest('.wishlist-btn');
+    const productData = {
+      id: btn.dataset.id,
+      name: btn.dataset.name,
+      price: btn.dataset.price,
+      image: btn.dataset.image,
+      rating: btn.dataset.rating || 0,
+      reviews: btn.dataset.reviews || 0
+    };
+    addToStorage('wishlist', productData);
+  }
 
-    
+  // Add to cart clicked
+  if (e.target.closest('.add-to-cart-hover')) {
+    const btn = e.target.closest('.add-to-cart-hover');
+    const card = btn.closest('.product-card');
+
+    const productData = {
+      id: card.querySelector('.wishlist-btn').dataset.id,
+      name: card.querySelector('.wishlist-btn').dataset.name,
+      price: card.querySelector('.wishlist-btn').dataset.price,
+      image: card.querySelector('.wishlist-btn').dataset.image,
+      rating: card.querySelector('.wishlist-btn').dataset.rating || 0,
+      reviews: card.querySelector('.wishlist-btn').dataset.reviews || 0
+    };
+    addToStorage('cart', productData);
+    alert(`${productData.name} added to cart`);
+  }
 });
+
+function addToStorage(storageKey, productData) {
+  let items = JSON.parse(localStorage.getItem(storageKey)) || [];
+  if (!items.some(item => item.id === productData.id)) {
+    items.push(productData);
+    localStorage.setItem(storageKey, JSON.stringify(items));
+  }
+}
+
