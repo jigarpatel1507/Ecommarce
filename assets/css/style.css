@@ -3,6 +3,7 @@
     --text-color: #FAFAFA;
     --primary-color: #FFFFFF;
     --secondary-color: #F5F5F5;
+    --secoundary2-color:#dc3545;
 }
 
 /* header style */
@@ -40,33 +41,38 @@ footer .copyright {
     color: var(--text2-color) !important;
 }
 
+/* Checkbox styles */
 .form-check-input[type="checkbox"]:checked {
-    background-color: #dc3545;
-    /* Bootstrap Danger */
-    border-color: #dc3545;
+    background-color: var(--secoundary2-color); 
+    border-color: var(--secoundary2-color);
 }
 
+/* Radio button styles */
 .form-check-input[type="radio"]:checked {
-    background-color: #000000;
-    /* Black fill */
-    border-color: #000000;
+    background-color: var(--secondary2-color); /* Black fill */
+    border-color: var(--secondary-color); /* Black fill */
 }
 
+/* Ensure specificity */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: var(--secoundary2-color) !important;
+}
 
 /*breadcrumb styles*/
 .breadcrumb a {
-    color: black !important;
+    color: var(--text2-color) !important;
     text-decoration: none;
 }
 
 .breadcrumb a:hover {
-    color: black !important;
+    color: var(--text2-color) !important;
     text-decoration: none;
 }
 
 /* profile */
 #profile input {
-    background-color: var(--secondary-color) !important;
-    color: var(--text2-color) !important;
+    background-color: var(--secondary-color);
+    color: var(--secondary2-color);
 }
 
