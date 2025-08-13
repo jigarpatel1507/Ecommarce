@@ -38,18 +38,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Logic for removing items from localStorage
+// Logic for handling clicks
 document.addEventListener('click', e => {
     if (e.target.closest('.trash-btn')) {
         const btn = e.target.closest('.trash-btn');
         const productId = btn.dataset.id; // Get the product ID from the button's data-id attribute
 
         // Remove item from wishlist
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        wishlist = wishlist.filter(item => item.id !== productId); // Filter out the item with the matching ID
-        localStorage.setItem('wishlist', JSON.stringify(wishlist)); // Update localStorage
-
-        // Remove the product card from the DOM
+        addToStorage('wishlist', { id: productId }, 'remove');
         btn.closest('.col-sm-6').remove();
     }
+
+    if (e.target.closest('.add-to-cart-hover')) {
+        const btn = e.target.closest('.add-to-cart-hover');
+        const card = btn.closest('.product-card');
+
+        const productData = {
+            id: card.querySelector('.trash-btn').dataset.id,
+            name: card.querySelector('.card-title').textContent,
+            price: parseFloat(card.querySelector('.text-danger').textContent.replace('$', '')),
+            image: card.querySelector('.product-img').src,
+            rating: card.querySelector('.text-warning').dataset.rating || 0,
+            reviews: card.querySelector('.text-warning').dataset.reviews || 0
+        };
+
+        addToStorage('cart', productData, 'add');
+        alert(`${productData.name} added to cart`);
+    }
 });
+
+// Helper function to add or remove items from localStorage
+function addToStorage(storageKey, productData, operation) {
+    let items = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+    if (operation === 'add') {
+        const existingProduct = items.find(item => item.id === productData.id);
+
+        if (existingProduct) {
+            alert(`${productData.name} is already in the ${storageKey}.`);
+        } else {
+            items.push(productData);
+            localStorage.setItem(storageKey, JSON.stringify(items));
+        }
+    } else if (operation === 'remove') {
+        items = items.filter(item => item.id !== productData.id); // Remove the item with the matching ID
+        localStorage.setItem(storageKey, JSON.stringify(items));
+    }
+}
