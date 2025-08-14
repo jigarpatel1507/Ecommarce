@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="card-body text-start">
                         <h6 class="card-title mb-1">${product.name}</h6>
-                        <p class="text-danger fw-bold mb-1">$${product.price}</p>
+                        <p class="text-danger fw-bold mb-1">₹${product.price}</p>
                         <div class="text-warning small mb-0">
                             ${'<i class="bi bi-star-fill"></i>'.repeat(product.rating)}
                             ${'<i class="bi bi-star"></i>'.repeat(5 - product.rating)}
