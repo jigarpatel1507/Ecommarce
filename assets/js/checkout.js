@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     applyCouponBtn.addEventListener("click", () => {
         const code = couponInput.value.trim().toUpperCase();
         if (isValidCoupon(code)) {
-            discountRate = 0.30; // 10% discount
+            discountRate = 0.30; // 30% discount
             appliedCoupon = code;
             localStorage.setItem("appliedCoupon", appliedCoupon);
             couponMessage.innerHTML = "<p class=\"text-success\">Congratulations! you got 30% discount..</p>";

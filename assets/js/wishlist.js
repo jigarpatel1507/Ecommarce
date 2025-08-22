@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card border-0 position-relative h-100 product-card">
                     <div class="position-absolute top-0 end-0 p-2 d-flex flex-column gap-2 z-3">
-                        <button class="btn btn-light btn-sm rounded-circle icon-btn trash-btn" 
+                        <button id="trash-btn" class="btn btn-light btn-sm rounded-circle icon-btn trash-btn" 
                                 data-id="${product.id}"><i class="bi bi-trash"></i></button>
                     </div>
                     <div class="image-box">
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="card-body text-start">
                         <h6 class="card-title mb-1">${product.name}</h6>
-                        <p class="text-danger fw-bold mb-1">₹${product.price}</p>
+                        <p class="text-danger fw-bold mb-1">${product.price}</p>
                         <div class="text-warning small mb-0">
                             ${'<i class="bi bi-star-fill"></i>'.repeat(product.rating)}
                             ${'<i class="bi bi-star"></i>'.repeat(5 - product.rating)}
@@ -69,7 +69,7 @@ document.addEventListener('click', e => {
 
 // Helper function to add or remove items from localStorage
 function addToStorage(storageKey, productData, operation) {
-    let items = JSON.parse(localStorage.getItem(storageKey)) || [];
+    let items = JSON.parse(localStorage.getItem(storageKey)) ?? [];
 
     if (operation === 'add') {
         const existingProduct = items.find(item => item.id === productData.id);

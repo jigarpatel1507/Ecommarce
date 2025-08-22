@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <tr>
                     <td>
                         <div class="d-flex align-items-center">
-                            <img src="${item.image}" alt="${item.name}" style="width:72px; height:44px;" class="me-3">
+                            <img src="${item.image}" alt="${item.name}" style="width:72px; Object-fit:fill" class="me-3">
                             ${item.name}
                         </div>
                     </td>
