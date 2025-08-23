@@ -3,17 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetch('../data.json')
     .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
     .then(products => {
-      // get wishlist from localStorage first
       const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
       products.forEach(product => {
-        // check if product is already in wishlist
         const isInWishlist = wishlist.some(item => item.id === String(product.id));
 
         const card = `
@@ -30,13 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     data-reviews="${product?.reviews}"> 
               <i class="bi ${isInWishlist ? "bi-heart-fill text-danger" : "bi-heart"}"></i>
             </button>
-            <button class="btn btn-light btn-sm rounded-circle icon-btn">
-              <i class="bi bi-eye"></i>
-            </button>
           </div>
 
           <div class="image-box">
-            <img src="${product.image}" alt="${product.name}" class="product-img">
+            <img src="${product?.image}" alt="${product?.name}" class="product-img">
           </div>
 
           <div class="add-to-cart-hover-wrapper w-100">
@@ -46,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-body text-start">
-            <h6 class="card-title mb-1">${product.name}</h6>
-            <p class="text-danger fw-bold mb-1">${product.price}</p>
+            <h6 class="card-title mb-1">${product?.name}</h6>
+            <p class="text-danger fw-bold mb-1">₹${product?.price}</p>
             <div class="text-warning small mb-0">
-              ${'<i class="bi bi-star-fill"></i>'.repeat(product.rating)}
-              ${'<i class="bi bi-star"></i>'.repeat(5 - product.rating)}
-              <span class="text-muted ms-1">(${product.reviews})</span>
+              ${'<i class="bi bi-star-fill"></i>'.repeat(product?.rating)}
+              ${'<i class="bi bi-star"></i>'.repeat(5 - product?.rating)}
+              <span class="text-muted ms-1">(${product?.reviews})</span>
             </div>
           </div>
 
@@ -61,51 +54,54 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML += card;
       });
     })
-    .catch(error => {
-      console.error("Error fetching products:", error);
-    });
+    .catch(error => console.error("Error fetching products:", error));
 });
 
-//logic for adding items to wishlist
-
 document.addEventListener('click', e => {
-  // Wishlist button clicked
+  // Wishlist toggle
   if (e.target.closest('.wishlist-btn')) {
     const btn = e.target.closest('.wishlist-btn');
     const icon = btn.querySelector("i");
 
     const productData = {
-      id: btn.dataset.id,
-      name: btn.dataset.name,
-      price: btn.dataset.price,
-      image: btn.dataset.image,
-      rating: btn.dataset.rating || 0,
-      reviews: btn.dataset.reviews || 0
+      id: btn?.dataset.id,
+      name: btn?.dataset.name,
+      price: Number(btn?.dataset.price),
+      image: btn?.dataset.image,
+      rating: Number(btn?.dataset.rating) || 0,
+      reviews: Number(btn?.dataset.reviews) || 0
     };
 
-    // Save to localStorage
-    addToStorage('wishlist', productData);
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-    // Toggle heart color + filled
-    icon.classList.toggle("bi-heart");
-    icon.classList.toggle("bi-heart-fill");
-    icon.classList.toggle("text-danger");
+    if (wishlist.some(item => item.id === productData.id)) {
+      wishlist = wishlist.filter(item => item.id !== productData.id);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      icon.classList.remove("bi-heart-fill", "text-danger");
+      icon.classList.add("bi-heart");
+    } else {
+      wishlist.push(productData);
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      icon.classList.remove("bi-heart");
+      icon.classList.add("bi-heart-fill", "text-danger");
+    }
   }
 
-
-  // Add to cart clicked
+  // Add to cart
   if (e.target.closest('.add-to-cart-hover')) {
-    const btn = e.target.closest('.add-to-cart-hover');
-    const card = btn.closest('.product-card');
+    const card = e.target.closest('.product-card');
+    const btn = card.querySelector('.wishlist-btn');
 
     const productData = {
-      id: card.querySelector('.wishlist-btn').dataset.id,
-      name: card.querySelector('.wishlist-btn').dataset.name,
-      price: card.querySelector('.wishlist-btn').dataset.price,
-      image: card.querySelector('.wishlist-btn').dataset.image,
-      rating: card.querySelector('.wishlist-btn').dataset.rating || 0,
-      reviews: card.querySelector('.wishlist-btn').dataset.reviews || 0
+      id: btn?.dataset.id,
+      name: btn?.dataset.name,
+      price: Number(btn?.dataset.price),
+      image: btn?.dataset.image,
+      rating: Number(btn?.dataset.rating) || 0,
+      reviews: Number(btn?.dataset.reviews) || 0,
+      quantity: 1
     };
+
     addToStorage('cart', productData);
     alert(`${productData.name} added to cart`);
   }
@@ -113,9 +109,13 @@ document.addEventListener('click', e => {
 
 function addToStorage(storageKey, productData) {
   let items = JSON.parse(localStorage.getItem(storageKey)) || [];
-  if (!items.some(item => item.id === productData.id)) {
-    items.push(productData);
-    localStorage.setItem(storageKey, JSON.stringify(items));
-  }
-}
+  const existing = items.find(item => item.id === productData.id);
 
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    items.push(productData);
+  }
+
+  localStorage.setItem(storageKey, JSON.stringify(items));
+}

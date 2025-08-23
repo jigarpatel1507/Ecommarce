@@ -23,7 +23,7 @@
 }
 
 /* Show button on hover (expand height) */
-.product-card:hover .add-to-cart-hover-wrapper {
+.product-card .add-to-cart-hover-wrapper {
   height: 48px; 
 }
 
